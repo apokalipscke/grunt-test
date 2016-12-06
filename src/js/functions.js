@@ -6,10 +6,11 @@ try{Typekit.load({ async: true });}catch(e){}
 
 /************************************************************ SCROLLEFFECTS ***/
 
+var $window = $(window);
+
 function check_if_in_view() {
   var window_height = $window.height();
-  //var window_top_position = $window.scrollTop();
-  var window_top_position = $('.scroll-content').scrollTop();
+  var window_top_position = $window.scrollTop();
   var window_bottom_position = (window_top_position + window_height);
 
   $.each($animation_elements, function() {
@@ -31,6 +32,7 @@ function check_if_in_view() {
 /*********************************************************** /SCROLLEFFECTS ***/
 
 $(document).ready(function($){
+  "use strict";
 
 /**************************************************************** UTILITIES ***/
 
@@ -44,12 +46,12 @@ $(document).ready(function($){
 
   /* smooth scroll */
   $(function() {
-    $('a[href*="#"]:not([href="#"]):not([href*="#accordion"])').click(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
-          $('.scroll-content').animate({
+          $window.animate({
             scrollTop: target.offset().top
           }, 1000);
           return false;
