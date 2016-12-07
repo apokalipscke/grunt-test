@@ -2,10 +2,10 @@
 Standard Typo3 Templates-Verzeichnis
 
 ## Anwendung
-`npm install` dependencies installieren
-`grunt watch` automatischer FTP-Upload und jshint von JS und CSS nach dem Speichern
-`grunt` jshint, sass, replace und uglify
-`grunt deploy` kompletten build ausführen und FTP-Upload
+* `npm install` dependencies installieren
+* `grunt watch` automatischer FTP-Upload und jshint von JS und CSS nach dem Speichern
+* `grunt` jshint, sass, replace und uglify
+* `grunt deploy` kompletten build ausführen und FTP-Upload
 
 ## Ordnerstruktur
 ```
